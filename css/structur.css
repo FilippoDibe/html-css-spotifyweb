@@ -1,0 +1,362 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Montserrat', sans-serif;
+}
+.general-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position:relative;
+}
+
+/**********************************
+    NAV BAR DIMENSIONI E STILE
+***********************************/
+nav{
+    width: 180px;
+    height: 92%;
+    background-color: black;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.nav-mobile{
+    display: none;
+}
+/* nav start blocco */
+.logo img{
+    width: 60%;
+}
+/* sezione azioni  */
+.azioni li, .playlist-nav li{
+    display: flex;
+    padding:3px;
+}
+.azioni li a, .playlist-nav li a{
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    color: grey;
+    padding-left: 5px;
+}
+.azioni li img{
+    width: 30px;
+}
+/* sezione playlist  */
+.playlist-nav{
+    color:white ;
+}
+
+#plus{
+    background-color: grey;
+    padding:2px 10px;
+    font-size:30px;
+    color: black ;
+}
+/* nav end blocco  */
+.download{
+    width: 90%;
+    margin:auto;
+    border-bottom: 1px solid grey;
+    display: flex;
+    padding:5px;
+    font-size: 10px;
+}
+.download a{
+    color: grey;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    padding-left:5px
+}
+.download img {
+    width: 5%;
+}
+.account{
+    width: 90%;
+    margin:auto;
+    display: flex;
+    padding:5px 0;
+}
+.account img{
+    background-color: gray;
+    border-radius: 50%;
+    width: 10%;
+}
+.account h5{
+    color:white;
+    padding: 0 5px;
+    display: flex;
+    align-self: center;
+    font-size: 13px;
+}
+
+/**********************************
+   dimensioni contenitori del nav
+***********************************/
+.logo,.azioni,.playlist-nav{
+   width: 80%;
+   margin:auto ;
+   padding-top:20px;
+  
+}
+/**********************************
+   over link del nav
+***********************************/
+.azioni li:hover{
+    text-decoration: underline;
+    border-left: 3px solid greenyellow;
+}
+.azioni li a:hover, .playlist-nav li a:hover{
+    color:white;
+}
+.playlist-nav li a:hover{
+    background-color: rgba(128, 128, 128, 0.279);
+    border-radius: 28px;
+    padding:2px 5px;
+}
+.download a:hover{
+    text-decoration: underline;
+}
+
+
+/**********************************
+    MAIN DIMENSIONI E STILE
+***********************************/
+main{
+   flex-grow: 1;
+   width: calc(100% - 180px);
+   height: 92%;
+   background-color: #141922;
+   overflow-y: scroll;
+}
+#upgrade{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: end;
+    background-color: #080b12b7;
+    
+}
+#upgrade a{
+    margin-right:5px;
+    align-self: center;
+    border:1px solid white;
+    border-radius: 28px;
+    padding: 5px 20px;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+}
+.where ul{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    list-style-type: none;
+    padding-top:10px;
+}
+.where a{
+    color:grey;
+    text-decoration: none;
+    font-size: 12px;
+
+}
+.container-music{
+    width: 95%;
+    margin: auto;
+  
+}
+.container-music h1{
+    color: white;
+    margin: 15px 10px;
+    padding-top:10px
+}
+.row-element, .row-element-2{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.card{
+    margin-left:10px;
+    width: calc(100% / 6 - 10px);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-2{
+    margin-left:10px;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    
+} 
+.container-music p{
+    margin: 15px 10px;
+    color:grey;
+    font-size:13px;
+}
+
+.card img, .card-2 img{
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    align-self: center;
+}
+.card h4,.card-2 h4, .card h6{
+    width: 100%;
+    margin: 0 auto;
+    padding-top:10px;
+    text-align: center;
+}
+.card h4,.card-2 h4{
+    color: white;
+    font-size: 14px;
+}
+.card h6{
+    color: grey;
+}
+/* player in hoer sulle card musicali  */
+.player{
+    position: relative;
+}
+.player i {
+    color:white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    display: none; 
+    padding:95px;
+}
+.circle{
+    border-radius: 50%;
+}
+.container-music:last-child{
+    padding-bottom:50px;
+}
+/* over sulle immagini con il player  */
+.palyer i:hover{
+    background-color: red;
+    display: block;
+}
+/**********************************
+    FOOTER DIMENSIONI E STILE
+***********************************/
+footer{
+    height: 8%;
+    position: absolute;
+    width: 100%;
+    background-color:#282828;
+    bottom:0;
+}
+.foot-container{
+    height: 8%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* parte di sinistra  */
+.foot-contain-sx{
+    display: flex;
+    width: 20%;
+}
+.foot-contain-sx img{
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-self: center;
+   margin: 0 10px;
+    
+}
+.name-artist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name-artist h5{
+    color: white;
+    font-size: 12px;
+}
+.name-artist h6{
+    color: gray;
+    font-size: 9px;
+}
+.foot-contain-sx i{
+    display: flex;
+    align-items: center;
+    margin-left:10px;
+    color: grey;
+}
+.foot-contain-sx .fa-heart{
+    margin-left:40px;
+}
+/* parte footer centrale  */
+.foot-contain-central{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.row-icon{
+    width: 15vw;
+}
+.row-icon ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    color:white;
+    padding-top:7px;
+}
+.row-icon li i{
+    font-size:20px;
+}
+.row-bar{
+    display: flex;
+    width: 30vw;
+    justify-content: space-between;
+    color: white;
+    font-size: 10px;
+}
+.total-time{
+    width: 100%;
+    height: 5px;
+    border-radius: 28px;
+    background-color: grey;
+    display: flex;
+    align-self: center;
+}
+.time{
+    width: 20%;
+    height: 5px;
+    border-radius: 28px;
+    background-color: white;
+}
+
+.start{
+    padding-right:20px;
+}
+.end{
+    padding-left:20px;
+}
+/* parte footer destra  */
+.foot-contain-dx{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    margin-right: 5px;
+    padding-left:100px;
+}
+.foot-contain-dx i{
+    margin:0 5px;
+    color: white;
+    font-size: 12px;
+}
